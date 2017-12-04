@@ -1,0 +1,36 @@
+{
+  "name": "emilianotisato/laravel-installer",
+  "description":
+    "Simple Laravel Web Wizard installer and updater for your projects. Yes, your clients can now install it on his own.",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "installer",
+    "web installer",
+    "laravel wizard",
+    "laravel updates"
+  ],
+  "authors": [
+    {
+      "name": "Emiliano Tisato",
+      "email": "emilianotisato@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0",
+    "illuminate/support": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "EmilianoTisato\\LaravelInstaller\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EmilianoTisato\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+      ]
+    }
+  }
+}
