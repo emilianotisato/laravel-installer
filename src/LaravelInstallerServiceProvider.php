@@ -1,6 +1,6 @@
 <?php
 
-namespace EmilianoTisato\LaravelInstaller\Providers;
+namespace EmilianoTisato\LaravelInstaller;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,9 @@ class LaravelInstallerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+        __DIR__ . '/../config/laravel-installer.php' => config_path('laravel-installer.php'),
+    ]);
     }
 
     /**
