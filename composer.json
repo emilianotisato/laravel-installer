@@ -21,15 +21,30 @@
     "php": ">=7.0.0",
     "illuminate/support": "^5.5"
   },
+  "require-dev": {
+    "phpunit/phpunit": "^6.2",
+    "orchestra/testbench": "~3.5.0"
+  },
   "autoload": {
     "psr-4": {
       "EmilianoTisato\\LaravelInstaller\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "EmilianoTisato\\LaravelInstaller\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
   "extra": {
     "laravel": {
       "providers": [
-        "EmilianoTisato\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+        "EmilianoTisato\\LaravelInstaller\\LaravelInstallerServiceProvider"
       ]
     }
   }
