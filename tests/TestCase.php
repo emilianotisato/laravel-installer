@@ -27,6 +27,8 @@ abstract class TestCase extends Orchestra
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('database.default', 'testing');
+
+        $app['router']->get('app-installer', 'EmilianoTisato\LaravelInstaller\Http\Controllers\InstallerController@install');
     }
 
     /**

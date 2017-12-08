@@ -15,7 +15,9 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     {
         $this->publishes([
         __DIR__ . '/../config/laravel-installer.php' => config_path('laravel-installer.php'),
-    ]);
+        ]);
+
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
     }
 
     /**
@@ -25,6 +27,8 @@ class LaravelInstallerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('app-installer', function () {
+            return new LaravelInstaller();
+        });
     }
 }
