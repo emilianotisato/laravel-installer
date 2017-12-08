@@ -45,7 +45,10 @@
     "laravel": {
       "providers": [
         "EmilianoTisato\\LaravelInstaller\\LaravelInstallerServiceProvider"
-      ]
+      ],
+      "aliases": {
+            "AppInstaller": "EmilianoTisato\\LaravelInstaller\\Facades\\AppInstaller"
+        }
     }
   }
 }
